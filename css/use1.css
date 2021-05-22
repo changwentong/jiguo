@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cbox {
+    height: 200px;
+    width: 1000px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.cbox>h1 {
+    font-weight: 500;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 42px;
+}
+
+.cbox>.c_box {
+    width: 340px;
+    height: 60px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.cbox>.c_box>li {
+    list-style: none;
+    width: 170px;
+    height: 60px;
+    line-height: 60px;
+    float: left;
+    font-size: 18px;
+    /* background-color: wheat; */
+    margin-top: 20px;
+}
+
+.cbox>.c_box>li>a {
+    text-decoration: none;
+    color: #999;
+}
+
+.cbox>.c_box>.cbox_1 {
+    border-bottom: 3px solid red;
+}
+
+.cbox>.c_box>.cbox_1>a {
+    color: red;
+}
+
+.cbox>.c_box2 {
+    width: 700px;
+    height: 50px;
+    line-height: 50px;
+    /* margin-top: 20px; */
+    margin: 0 auto;
+    padding-top: 25px;
+    list-style: none;
+}
+
+.cbox>.c_box2>li {
+    /* background-color: red; */
+    text-align: center;
+    float: left;
+    margin-left: 65px;
+    margin-right: 60px;
+    font-size: 18px;
+}
+
+.c_box2>li>a {
+    color: #999;
+    text-decoration: none;
+}
+
+.c_box2>.c_box2_1>a {
+    color: black;
+}
+
+.banxin2 {
+    width: 100%;
+    height: 1000px;
+    background-color: rgb(247, 247, 247);
+}
+
+.xuan {
+    width: 1000px;
+    height: 950px;
+    margin: 0 auto;
+    overflow: hidden;
+    /* background-color: green; */
+}
+
+.xuan1 {
+    width: 223px;
+    height: 288px;
+    float: left;
+    margin-left: 10px;
+    margin-right: 17px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+    /* background-color: rosybrown; */
+    border: 1px solid #999;
+    background-color: white;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.xuan1>span {
+    text-align: center;
+    width: 40px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 0px 5px 0px 5px;
+    position: absolute;
+    top: 0;
+    color: white;
+    right: 0;
+    background-color: red;
+}
+
+.xuan1>img {
+    width: 222px;
+    height: 133px;
+}
+
+.xuan1>h2 {
+    font-size: 16px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    color: black;
+}
+
+.xuan1>.cxuanp1 {
+    width: 150px;
+    height: 24px;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.xuan1>.cxuanp1>span {
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    border: 1px solid #999;
+    border-radius: 5px;
+    margin-left: 14px;
+    color: #999;
+    font-size: 10px;
+    /* margin: 0 auto; */
+}
+
+.xuan1>.cxuanp2 {
+    color: black;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 10px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.xuan1>.cxuanp2>span {
+    color: red;
+}
+
+.xuan1>.cxuanp3 {
+    margin-top: 10px;
+    font-size: 10px;
+    color: #666;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+/* 第一行第二块 */
+
+.xuan1>.cxuanp1-2 {
+    width: 150px;
+    height: 24px;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.xuan1>.cxuanp1-2>span {
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    border: 1px solid green;
+    border-radius: 5px;
+    margin-left: 14px;
+    color: green;
+    font-size: 10px;
+    /* margin: 0 auto; */
+}
+
+.xuan1>.cxuanp3-2 {
+    margin-top: 10px;
+    font-size: 10px;
+    color: green;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+/* 第一行第四块 */
+
+.xuan1>.cxuanp1-4 {
+    width: 150px;
+    height: 24px;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.xuan1>.cxuanp1-4>span {
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    border: 1px solid red;
+    border-radius: 5px;
+    margin-left: 14px;
+    color: red;
+    font-size: 10px;
+    /* margin: 0 auto; */
+}
+
+.xuan1>.cxuanp3-4 {
+    margin-top: 10px;
+    font-size: 10px;
+    color: red;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.b {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(247, 247, 247);
+}
+
+.jiazai {
+    width: 150px;
+    height: 50px;
+    /* line-height: 50px; */
+    margin: 0 auto;
+    color: red;
+}
+
+.jiazai>img {
+    margin-top: 13px;
+}
+
+.jiazai>p {
+    float: right;
+    width: 130px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: -4px;
+    font-size: 18px;
+}
+
+.jiazai:hover {
+    cursor: pointer;
+}
