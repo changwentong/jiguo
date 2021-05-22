@@ -1,0 +1,281 @@
+.nav {
+    height: 300px;
+    background: url(../img/original.jpg) no-repeat;
+}
+
+.banner {
+    position: relative;
+}
+
+.nav .banner .nav_vedio {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 330px;
+    height: 255px;
+    margin-top: 20px;
+    animation: move 1s linear forwards;
+    float: right;
+}
+
+@keyframes move {
+    0% {
+        position: absolute;
+        top: -200px;
+        right: -200px;
+    }
+    100% {
+        position: absolute;
+        top: -0px;
+        right: 0px;
+    }
+}
+
+.nav .banner .nav_vedio h2 {
+    font-size: 24px;
+    color: #ffffff;
+    float: right;
+    margin: 15px 0;
+}
+
+.nav .banner .nav_vedio ul {
+    float: right;
+    margin: 15px 0;
+}
+
+.nav .banner .nav_vedio ul li {
+    float: left;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: rgba(247, 236, 236, 0.5);
+    padding: 5px;
+    margin-left: 10px;
+}
+
+#time {
+    font-size: 16px;
+    color: #ffffff;
+    float: right;
+    margin: 15px 0;
+}
+
+.nav .banner .nav_vedio button {
+    width: 240px;
+    height: 50px;
+    background-color: #fe5341;
+    float: right;
+    font-size: 20px;
+    color: #ffffff;
+    border: none;
+    margin: 15px 0;
+}
+
+.nav .banner .nav_vedio button:hover {
+    cursor: pointer;
+}
+
+.cbox {
+    width: 100%;
+    height: 450px;
+    position: relative;
+}
+
+.cbox>a:nth-of-type(1)>img {
+    position: absolute;
+    top: 178px;
+    left: 390px;
+}
+
+.cbox>a:nth-of-type(2)>img {
+    position: absolute;
+    top: 178px;
+    right: 390px;
+}
+
+.cbox1 {
+    width: 1000px;
+    height: 420px;
+    margin: 0 auto;
+    /* background-color: #fe5341; */
+}
+
+.cbox1>h2 {
+    height: 70px;
+    line-height: 70px;
+    text-indent: 20px;
+}
+
+.xuan1 {
+    width: 223px;
+    height: 288px;
+    float: left;
+    margin-left: 10px;
+    margin-right: 17px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+    /* background-color: rosybrown; */
+    border: 1px solid #999;
+    background-color: white;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.xuan1>span {
+    text-align: center;
+    width: 40px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 0px 5px 0px 5px;
+    position: absolute;
+    top: 0;
+    color: white;
+    right: 0;
+    background-color: red;
+}
+
+.xuan1>img {
+    width: 222px;
+    height: 133px;
+}
+
+.xuan1>h2 {
+    font-size: 16px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    color: black;
+}
+
+.xuan1>.cxuanp1 {
+    width: 150px;
+    height: 24px;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.xuan1>.cxuanp1>span {
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    border: 1px solid #999;
+    border-radius: 5px;
+    margin-left: 14px;
+    color: #999;
+    font-size: 10px;
+    /* margin: 0 auto; */
+}
+
+.xuan1>.cxuanp2 {
+    color: black;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 10px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.xuan1>.cxuanp2>span {
+    color: red;
+}
+
+.xuan1>.cxuanp3 {
+    margin-top: 10px;
+    font-size: 10px;
+    color: #666;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.xuan1>.cxuanp1-2 {
+    width: 150px;
+    height: 24px;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.xuan1>.cxuanp1-2>span {
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    border: 1px solid green;
+    border-radius: 5px;
+    margin-left: 14px;
+    color: green;
+    font-size: 10px;
+    /* margin: 0 auto; */
+}
+
+.xuan1>.cxuanp3-2 {
+    margin-top: 10px;
+    font-size: 10px;
+    color: green;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+/* 第一行第四块 */
+
+.xuan1>.cxuanp1-4 {
+    width: 150px;
+    height: 24px;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.xuan1>.cxuanp1-4>span {
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    border: 1px solid red;
+    border-radius: 5px;
+    margin-left: 14px;
+    color: red;
+    font-size: 10px;
+    /* margin: 0 auto; */
+}
+
+.xuan1>.cxuanp3-4 {
+    margin-top: 10px;
+    font-size: 10px;
+    color: red;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+/* 热门试用结束 */
+
+.cbox ul li {
+    width: 1000px;
+    height: 320px;
+    float: left;
+}
+
+.cbox .citem1 .citem2 ul {
+    width: 3000px;
+    height: 320px;
+}
+
+.citem2 {
+    overflow: hidden;
+}

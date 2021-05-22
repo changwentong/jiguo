@@ -53,7 +53,7 @@
     line-height: 80px;
 }
 
-.header ul .header_color a {
+.header ul .header-color a {
     color: #fe5341;
 }
 
@@ -101,7 +101,7 @@
     background-color: #fe5341;
 }
 
-.header .header_right .header_button a:hover {
+.header .header_right .header_button:hover a {
     color: #fff;
 }
 
@@ -207,4 +207,29 @@
     height: 30px;
     padding: 6px 7px;
     background-color: #e8e8e8;
+}
+
+.jiazai {
+    width: 150px;
+    height: 50px;
+    /* line-height: 50px; */
+    margin: 0 auto;
+    color: red;
+}
+
+.jiazai>img {
+    margin-top: 13px;
+}
+
+.jiazai>p {
+    float: right;
+    width: 130px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: -4px;
+    font-size: 18px;
+}
+
+.jiazai:hover {
+    cursor: pointer;
 }
