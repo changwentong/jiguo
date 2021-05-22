@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>极果首页</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/play.css">
+</head>
+
+<body>
+
+    <!-- header头部部分 -->
+    <header class="header">
+        <div class="w">
+            <div class="header_logo">
+                <a href="./index.html"><img src="../images/logonew.png" alt=""></a>
+            </div>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li class="header-color"><a href="#">酷玩</a></li>
+                <li><a href="#">导购</a></li>
+                <li><a href="#">试用</a></li>
+                <li><a href="#">报告</a></li>
+            </ul>
+            <div class="header_right">
+                <div class="header_search">
+                    <img src="../img/search.png" alt="">
+                </div>
+                <div class="header_button"><a href="">注册</a></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- //发现酷玩和三个选项 -->
+    <div class="play">
+        <div class="play_h">
+            <h1 class='z_h1'>发现酷玩</h1>
+            <div class="play_nav">
+                <a href="./play.html">最新</a>
+                <a href="" class="play_red">最热</a>
+                <a href="./play3.html">品类</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- //商品列表 -->
+    <div class="play1">
+        <div class='play_shop'>
+            <ul id="list">
+
+            </ul>
+            <ul id="god">
+
+            </ul>
+        </div>
+        <div class="nb" onclick="play_fn()">
+            <p> <img src="../img/more.png" alt="">&nbsp;<a href="javascript:;"> 点击加载更多</a></p>
+        </div>
+    </div>
+
+
+
+    <!-- footer底部部分 -->
+    <footer class="footer">
+        <div class="footer_last w">
+            <div class="footer_logo">
+                <img class="footer_a" src="../images/code.png" alt="">
+                <div class="footer_b">
+                    <img src="../images/logoImg.jpg" alt="">
+                    <p>全球酷玩试用导购平台<br>酷.新奇.好玩.品质</p>
+                    <p>微信添加"JguoJguo"<br>获取我们的服务。</p>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <dl>
+                    <dt>免费试用</dt>
+                    <dd><a href="">试用流程</a></dd>
+                    <dd><a href="">如何提高成功率</a></dd>
+                </dl>
+                <dl class="bottom">
+                    <dt>友情链接</dt>
+                    <dd><a href="">智东西</a></dd>
+                    <dd><a href="">WEIBUSI</a></dd>
+                    <dd><a href="">搜狐IT</a></dd>
+                    <dd><a href="">腾讯科技</a></dd>
+                    <dd><a href="">搜狐数码</a></dd>
+                    <dd><a href="">凤凰科技</a></dd>
+                    <dd><a href="">凤凰数码</a></dd>
+                    <dd><a href="">PConline</a></dd>
+                    <dd><a href="">泡泡网</a></dd>
+                    <dd><a href="">3W咖啡</a></dd>
+                    <dd><a href="">ZUK社区</a></dd>
+                    <dd><a href="">亿觅emie</a></dd>
+                    <dd><a href="">极客公园</a></dd>
+                    <dd><a href="">易迅易启玩</a></dd>
+                    <dd><a href="">果库</a></dd>
+                </dl>
+                <dl>
+                    <dt>购买攻略</dt>
+                    <dd><a href="">美亚海淘教程</a></dd>
+                    <dd><a href="">日亚海淘教程</a></dd>
+                    <dd><a href="">海淘转运攻略</a></dd>
+                    <dd><a href="">kickstarter 众筹购买攻略</a></dd>
+                    <dd><a href="">indiegogo 众筹购买攻略</a></dd>
+                </dl>
+                <dl>
+                    <dt>厂商合作</dt>
+                    <dd><a href="">关于极果</a></dd>
+                    <dd><a href="">联系我们</a></dd>
+                    <dd><a href="">商务合作：BD@jiguo.coom</a></dd>
+                    <dd><a href="">CEO邮箱：CEO@jiguo.coom</a></dd>
+                </dl>
+            </div>
+            <div class="end">
+                <p>© 2016 极果版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
+
+<script src="../doT.min.js"></script>
+<script src="../js/play.js"></script>
+
+
+<script id="play_script" type="text/x-dot-template">
+    {{~it:value:index}}
+    <li>
+        <a href="../jingtai.html">
+            <img src="{{=value.img}}" alt="">
+            <div class="play_name">
+                <p id="play_p">{{= value.text}}</p>
+                <span>{{= value.description}}</span>
+            </div>
+            <div class="play_bottom">
+                <span>{{= value.price}}</span>
+                <label for="" class="play_right">{{= value.like}}</label>
+                <label for="" class="play_right2">{{= value.words}}</label>
+            </div>
+        </a>
+    </li>
+    {{~}}
+</script>

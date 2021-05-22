@@ -1,0 +1,217 @@
+.sylc_logo {
+    width: 100%;
+    height: 90px;
+    background-color: rgb(240, 240, 240);
+}
+
+.sylc_logo>.logo {
+    width: 1000px;
+    margin: 0 auto;
+    height: 90px;
+    padding-top: 0px;
+    background-color: rgb(240, 240, 240);
+}
+
+.logo_text {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 30px;
+    width: 60px;
+    padding-left: 10px;
+    margin-top: 10px;
+    border-left: 4px solid red;
+}
+
+.logo_img {
+    display: inline-block;
+    padding: 10px 50px;
+    text-align: center;
+}
+
+.logo_img>span {
+    margin-top: 5px;
+    color: #666;
+    font-size: 14px;
+    display: block;
+}
+
+.logo_imgtext {
+    border-bottom: 4px solid red;
+}
+
+.sylc_center {
+    width: 1000px;
+    height: 2280px;
+    /* background-color: pink; */
+    margin: 0 auto;
+}
+
+.sylc_left {
+    width: 500px;
+    height: 1934px;
+    float: left;
+    padding: 20px 0px;
+}
+
+.sylc_right {
+    float: right;
+    width: 300px;
+    height: 1934px;
+    /* background-color: wheat; */
+}
+
+.sylc_left>.left_text {
+    font-size: 16px;
+    line-height: 30px;
+    width: 110px;
+    padding-left: 10px;
+    margin-top: 40px;
+    border-left: 4px solid red;
+}
+
+.sylc_left>.left_red {
+    color: red;
+    font-weight: 600;
+    font-size: 14px;
+    padding-top: 20px;
+}
+
+.sylc_left>img {
+    padding-top: 20px;
+}
+
+.sylc_left>span {
+    display: block;
+    font-size: 14px;
+    padding-top: 20px;
+}
+
+.left_blue {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(82, 134, 196);
+    padding-top: 20px;
+}
+
+.left_blue1 {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(115, 149, 190);
+    padding-top: 20px;
+}
+
+.xh {
+    color: rgb(104, 97, 97);
+    font-size: 14px;
+    display: inline-block;
+}
+
+.bz {
+    color: black;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.sylc_right>.right_text {
+    font-size: 16px;
+    line-height: 30px;
+    width: 110px;
+    padding-left: 10px;
+    margin-top: 30px;
+    border-left: 4px solid red;
+}
+
+.money {
+    margin-left: 5px;
+    margin-top: 20px;
+    font-size: 35px;
+    color: red;
+}
+
+.shop {
+    margin-top: 20px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 300px;
+    height: 60px;
+    color: white;
+    background-color: rgb(233, 47, 47);
+}
+
+.textcen {
+    display: inline-block;
+    margin-left: 120px;
+    color: #666;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.sylc_right>img {
+    padding: 20px 0;
+}
+
+.xiao {
+    font-size: 12px;
+    color: #666;
+}
+
+.xiao1 {
+    font-size: 12px;
+    color: #666;
+    display: block;
+}
+
+.center_bottom {
+    clear: both;
+    width: 1000px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.center_bottom>ul {
+    list-style: none;
+    width: 1000px;
+}
+
+.center_bottom>ul>a>li {
+    margin-left: 40px;
+    text-align: center;
+    margin-top: 20px;
+    float: left;
+    width: 210px;
+    height: 270px;
+    /* background-color: wheat; */
+    border-radius: 8px;
+    border: 1px solid rgba(153, 153, 153, .5);
+}
+
+.center_bottom>ul>a>.bottom_li1 {
+    margin-left: 0px;
+}
+
+.center_bottom>ul>a:hover {
+    color: black;
+}
+
+.center_bottom>ul>a>li>img {
+    width: 208px;
+    border-radius: 8px 8px 0 0;
+}
+
+.bottom_span {
+    margin-top: 10px;
+    display: inline-block;
+    width: 50px;
+    font-size: 14px;
+    color: red;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+.label_red {
+    display: inline-block;
+    margin-top: 10px;
+    color: red;
+}
