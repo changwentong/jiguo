@@ -1,0 +1,100 @@
+.header {
+    border-bottom: 1px solid rgb(218, 220, 224);
+}
+
+.box {
+    width: 100%;
+    height: 850px;
+    background-color: rgb(247, 247, 247);
+}
+
+.boxx {
+    width: 100%;
+    height: 30px;
+    background-color: rgb(247, 247, 247);
+}
+
+.box-1 {
+    width: 1000px;
+    height: 785px;
+    background-color: #fff;
+    /* position: absolute; */
+    margin: 0 auto;
+    border: 1px solid rgb(218, 220, 224);
+}
+
+.box-1>h3 {
+    font-weight: normal;
+    margin-top: 25px;
+    width: 110px;
+    height: 27px;
+    line-height: 27px;
+    text-align: center;
+    /* border: 1px solid springgreen; */
+    border-left: 5px solid rgb(254, 83, 65);
+}
+
+.zhong {
+    width: 400px;
+    height: 550px;
+    /* background-color: rgb(254, 83, 65); */
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.zhong input {
+    width: 400px;
+    height: 50px;
+    font-size: 18px;
+    background-color: rgb(247, 247, 247);
+    border-radius: 10px;
+    border: 1px solid rgb(218, 220, 224);
+    text-indent: 8px;
+    margin-bottom: 30px;
+}
+
+.zhong input:nth-of-type(2) {
+    width: 250px;
+}
+
+.zhong input:nth-of-type(3) {
+    width: 250px;
+}
+
+.zhong input:nth-of-type(7) {
+    background-color: rgb(254, 83, 65);
+    color: white;
+}
+
+.zhong input:nth-of-type(7):hover {
+    background-color: rgb(253, 48, 27);
+    cursor: pointer;
+}
+
+#yzmt {
+    width: 133px;
+    height: 50px;
+    /* border: 1px solid rgb(218, 220, 224); */
+    border-radius: 8px;
+    float: right;
+}
+
+#yzmt>img {
+    margin-top: 6px;
+    margin-left: 2px;
+}
+
+#yzm {
+    width: 133px;
+    height: 50px;
+    border: 1px solid rgb(218, 220, 224);
+    border-radius: 8px;
+    float: right;
+    text-align: center;
+    line-height: 50px;
+    color: #999;
+}
+
+#yzm:hover {
+    cursor: pointer;
+}
