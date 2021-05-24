@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>极果首页</title>
+
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/index.css">
@@ -192,6 +192,48 @@
                 </ul>
             </div>
         </div>
+   
+   
+    <!-- //商品列表 -->
+    <div class="index_xr">
+        <div class="center_gd">
+            <h3>报告精选</h3>
+            <a href="" class="god">查看更多</a>
+        </div>
+        <div class="play1" height='500px'>
+            <div class='play_shop'>
+                <ul id="list">
+                </ul>
+            </div>
+        </div>
+
+        <!-- 导购精选 -->
+        <div class='center_god1'>
+            <div class="center_gd1">
+                <h3>报告精选</h3>
+                <a href="" class="god">查看更多</a>
+            </div>
+        </div>
+        <div class="play2_index" height='250px'>
+            <div class='play_shop'>
+                <ul id="list1">
+                </ul>
+            </div>
+        </div>
+
+        <!-- 发现酷玩 -->
+        <div class="center_gd">
+            <h3>报告精选</h3>
+            <a href="" class="god">查看更多</a>
+        </div>
+        <div class="play3_index" height='500px'>
+            <div class='play_shop'>
+                <ul id="list2">
+                </ul>
+            </div>
+        </div>
+    </div>
+   
         <div class="b">
             <div class="jiazai">
                 <img src="./img/more.png" alt="">
@@ -199,10 +241,6 @@
             </div>
         </div>
  </div>
-</div>
-
-
-
 
 
     <!-- footer底部部分 -->
@@ -268,6 +306,161 @@
 </body>
 
 </html>
+
+<!-- 报告精选的渲染 -->
+<script src="./doT.min.js"></script>
+<script>
+    function show() {
+        var ajax_ = new XMLHttpRequest() || new ActiveXObject('Misfort.XMLHTTP');
+
+        ajax_.open('get', 'http://1.15.132.9:3000/useing/master', true);
+
+        ajax_.send();
+
+        ajax_.onreadystatechange = function() {
+            if (ajax_.readyState == 4) {
+                if (ajax_.status == 200) {
+
+                    var data = JSON.parse(ajax_.responseText);
+
+                    var tepText = doT.template(document.getElementById('play_script').innerText);
+
+                    document.getElementById('list').innerHTML = tepText(data);
+
+                }
+            }
+        }
+    }
+    show();
+</script>
+<script id="play_script" type="text/x-dot-template">
+    {{~it:value:index}}
+    <li>
+        <a href="./jingtai.html">
+            <img src="{{=value.img}}" alt="">
+            <div class="play_name">
+                <p id="play_p">{{= value.text}}</p>
+            </div>
+            <div class="play_bottom">
+                <span>● </span>
+                <span>{{= value.uName}}</span>
+                <label for="" class="play_right">{{=3}}</label>
+                <label for="" class="play_right2">{{=5}}</label>
+            </div>
+        </a>
+    </li>
+    {{~}}
+</script>
+
+
+<!-- //倒计时 -->
+<script>
+    var index_span = document.getElementsByClassName('span_time');
+    setInterval(function() {
+        var currentTime = new Date();
+        var futureTime = new Date(2021, 5, 1);
+        var differenceTime = futureTime - currentTime;
+        var day = Math.floor(differenceTime / 1000 / 60 / 60 / 24);
+        day > 10 ? day : day = ('0' + day);
+        var hours = Math.floor(differenceTime / 1000 / 60 / 60 % 24);
+        hours > 10 ? hours : hours = ('0' + hours);
+        var minutes = Math.floor(differenceTime / 1000 / 60 % 60);
+        minutes > 10 ? minutes : minutes = ('0' + minutes);
+        index_span[0].innerHTML = day;
+        index_span[1].innerHTML = hours;
+        index_span[2].innerHTML = minutes;
+    }, 1000);
+</script>
+
+
+<script>
+    function show() {
+        var ajax_ = new XMLHttpRequest() || new ActiveXObject('Misfort.XMLHTTP');
+
+        ajax_.open('get', 'http://1.15.132.9:3000/useing/master', true);
+
+        ajax_.send();
+
+        ajax_.onreadystatechange = function() {
+            if (ajax_.readyState == 4) {
+                if (ajax_.status == 200) {
+
+                    var data = JSON.parse(ajax_.responseText);
+
+                    console.log(data);
+                    // console.log(data);
+                    var tepText = doT.template(document.getElementById('play_script1').innerText);
+
+                    document.getElementById('list1').innerHTML = tepText(data);
+
+                }
+            }
+        }
+    }
+    show()
+</script>
+
+<script id="play_script1" type="text/x-dot-template">
+    {{~it:value:index}}
+    <li>
+        <a href="./jingtai.html">
+            <img src="{{=value.img}}" alt="">
+            <div class="play_name">
+                <p id="play_p">{{= value.text}}</p>
+            </div>
+            <div class="play_bottom1">
+                <label for="" class="play_right">{{=3}}</label>
+                <label for="" class="play_right2">{{=5}}</label>
+            </div>
+        </a>
+    </li>
+    {{~}}
+</script>
+
+<script>
+    function show() {
+        var ajax_ = new XMLHttpRequest() || new ActiveXObject('Misfort.XMLHTTP');
+
+        ajax_.open('get', 'http://1.15.132.9:3000/play/new', true);
+
+        ajax_.send();
+
+        ajax_.onreadystatechange = function() {
+            if (ajax_.readyState == 4) {
+                if (ajax_.status == 200) {
+
+                    var data = JSON.parse(ajax_.responseText);
+
+                    console.log(data);
+                    // console.log(data);
+                    var tepText = doT.template(document.getElementById('play_script2').innerText);
+
+                    document.getElementById('list2').innerHTML = tepText(data[0]) + tepText(data[1]);
+
+                }
+            }
+        }
+    }
+    show()
+</script>
+
+<script id="play_script2" type="text/x-dot-template">
+    {{~it:value:index}}
+    <li>
+        <a href="./jingtai.html">
+            <img src="{{=value.img}}" alt="">
+            <div class="play_name">
+                <p id="play_p">{{= value.text}}</p>
+                <span id='nb666'>{{= value.price}}</span>
+            </div>
+            <div class="play_bottom1">
+                <label for="" class="play_right">{{=3}}</label>
+                <label for="" class="play_right2">{{=5}}</label>
+            </div>
+        </a>
+    </li>
+    {{~}}
+</script>
 <script src="./js/jQuery-3.6.0.min.js"></script>
 <script src="./js/index.js"></script>
 <script>
@@ -275,38 +468,3 @@ var jiazai = document.getElementsByClassName('jiazai')[0];
     jiazai.onclick = function() {
     jiazai.innerHTML = '<div class="jiazai"> <img src="./img/loading-icon.gif"><p>正在加载中</p></div>'
     }</script>
-<!-- <script>
-function remen(){
-    var ajax_ = new XMLHttpRequest() || new ActiveXObject();
-    ajax_.open('get', 'http://1.15.132.9:3000/useing/public', true);
-    ajax_.send();
-    ajax_.onreadystatechange = function() {
-        if (ajax_.readyState == 4) {
-            if (ajax_.status == 200) {
-                var date = JSON.parse(ajax_.responseText);
-                var template = doT.template(document.getElementById('muban').innerHTML);
-                document.getElementById('xuan').innerHTML = template(date);
-                console.log(date);
-            }
-        }
-    }
-}
-
-</script>
-<script src="./js/doT.min.js "></script>
-<script id="muban" type="text/x-dot-template ">
-{{~it:value:index}}
-<a href="# ">
-    <div class="xuan1 ">
-        <span>首发</span>
-        <img src="{{=value.img}} ">
-        <h2 class="cname ">{{=value.text}}</h2>
-        <p class="cxuanp1 "><span>{{=value.totalnum}}</span><span>{{=value.num}}</span></p>
-        <p class="cxuanp2 "><span>{{=value.apply}}</span>申请</p>
-        <p class="cxuanp3 ">报告数量：8</p>
-    </div>
-</a>
-
-{{~}}
-</script>
-<script>remen()</script> -->
