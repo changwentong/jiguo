@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/zindex.css">
 </head>
 
 <body>
@@ -192,16 +193,57 @@
                 </ul>
             </div>
         </div>
-        <div class="b">
-            <div class="jiazai">
-                <img src="./img/more.png" alt="">
-                <p>点击加载更多</p>
-            </div>
-        </div>
+
+
  </div>
 </div>
+<!-- 渲染部分 -->
+    <!-- //商品列表 -->
+    <div class="index_xr">
+        <div class="center_gd">
+            <h3>报告精选</h3>
+            <a href="" class="god">查看更多</a>
+        </div>
+        <div class="play1" height='500px'>
+            <div class='play_shop'>
+                <ul id="list">
+                </ul>
+            </div>
+        </div>
 
+        <!-- 导购精选 -->
+        <div class='center_god1'>
+            <div class="center_gd1">
+                <h3>导购精选</h3>
+                <a href="" class="god">查看更多</a>
+            </div>
+        </div>
+        <div class="play2_index" height='250px'>
+            <div class='play_shop'>
+                <ul id="list1">
+                </ul>
+            </div>
+        </div>
 
+        <!-- 发现酷玩 -->
+        <div class="center_gd">
+            <h3>发现酷玩</h3>
+            <a href="" class="god">查看更多</a>
+        </div>
+        <div class="play3_index" height='500px'>
+            <div class='play_shop'>
+                <ul id="list2">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="b">
+        <div class="jiazai">
+            <img src="./img/more.png" alt="">
+            <p>点击加载更多</p>
+        </div>
+    </div>
 
 
 
@@ -270,43 +312,142 @@
 </html>
 <script src="./js/jQuery-3.6.0.min.js"></script>
 <script src="./js/index.js"></script>
+<script src="./doT.min.js"></script>
 <script>
 var jiazai = document.getElementsByClassName('jiazai')[0];
     jiazai.onclick = function() {
     jiazai.innerHTML = '<div class="jiazai"> <img src="./img/loading-icon.gif"><p>正在加载中</p></div>'
     }</script>
-<!-- <script>
-function remen(){
-    var ajax_ = new XMLHttpRequest() || new ActiveXObject();
-    ajax_.open('get', 'http://1.15.132.9:3000/useing/public', true);
-    ajax_.send();
-    ajax_.onreadystatechange = function() {
-        if (ajax_.readyState == 4) {
-            if (ajax_.status == 200) {
-                var date = JSON.parse(ajax_.responseText);
-                var template = doT.template(document.getElementById('muban').innerHTML);
-                document.getElementById('xuan').innerHTML = template(date);
-                console.log(date);
+    <script>
+          function show() {
+        var ajax_ = new XMLHttpRequest() || new ActiveXObject('Misfort.XMLHTTP');
+
+        ajax_.open('get', 'http://1.15.132.9:3000/useing/master', true);
+
+        ajax_.send();
+
+        ajax_.onreadystatechange = function() {
+            if (ajax_.readyState == 4) {
+                if (ajax_.status == 200) {
+
+                    var data = JSON.parse(ajax_.responseText);
+
+                    var tepText = doT.template(document.getElementById('play_script').innerText);
+
+                    document.getElementById('list').innerHTML = tepText(data);
+
+                }
             }
         }
     }
-}
+    show();
+    </script>
+    <script id="play_script" type="text/x-dot-template">
+        {{~it:value:index}}
+        <li>
+            <a href="./jingtai.html">
+                <img src="{{=value.img}}" alt="">
+                <div class="play_name">
+                    <p id="play_p">{{= value.text}}</p>
+                </div>
+                <div class="play_bottom">
+                    <span>● </span>
+                    <span>{{= value.uName}}</span>
+                    <label for="" class="play_right">{{=3}}</label>
+                    <label for="" class="play_right2">{{=5}}</label>
+                </div>
+            </a>
+        </li>
+        {{~}}
+    </script>
+    
+    
+    
+    <script>
+        function show() {
+            var ajax_ = new XMLHttpRequest() || new ActiveXObject('Misfort.XMLHTTP');
+    
+            ajax_.open('get', 'http://1.15.132.9:3000/useing/master', true);
+    
+            ajax_.send();
+    
+            ajax_.onreadystatechange = function() {
+                if (ajax_.readyState == 4) {
+                    if (ajax_.status == 200) {
+    
+                        var data = JSON.parse(ajax_.responseText);
+    
+                        console.log(data);
+                        // console.log(data);
+                        var tepText = doT.template(document.getElementById('play_script1').innerText);
+    
+                        document.getElementById('list1').innerHTML = tepText(data);
+    
+                    }
+                }
+            }
+        }
+        show()
+    </script>
+    
+    <script id="play_script1" type="text/x-dot-template">
+        {{~it:value:index}}
+        <li>
+            <a href="./jingtai.html">
+                <img src="{{=value.img}}" alt="">
+                <div class="play_name">
+                    <p id="play_p">{{= value.text}}</p>
+                </div>
+                <div class="play_bottom1">
+                    <label for="" class="play_right">{{=3}}</label>
+                    <label for="" class="play_right2">{{=5}}</label>
+                </div>
+            </a>
+        </li>
+        {{~}}
+    </script>
+    
+    <script>
+        function show() {
+            var ajax_ = new XMLHttpRequest() || new ActiveXObject('Misfort.XMLHTTP');
+    
+            ajax_.open('get', 'http://1.15.132.9:3000/play/new', true);
+    
+            ajax_.send();
+    
+            ajax_.onreadystatechange = function() {
+                if (ajax_.readyState == 4) {
+                    if (ajax_.status == 200) {
+    
+                        var data = JSON.parse(ajax_.responseText);
+    
+                        console.log(data);
+                        // console.log(data);
+                        var tepText = doT.template(document.getElementById('play_script2').innerText);
+    
+                        document.getElementById('list2').innerHTML = tepText(data[0]) + tepText(data[1]);
+    
+                    }
+                }
+            }
+        }
+        show()
+    </script>
 
-</script>
-<script src="./js/doT.min.js "></script>
-<script id="muban" type="text/x-dot-template ">
-{{~it:value:index}}
-<a href="# ">
-    <div class="xuan1 ">
-        <span>首发</span>
-        <img src="{{=value.img}} ">
-        <h2 class="cname ">{{=value.text}}</h2>
-        <p class="cxuanp1 "><span>{{=value.totalnum}}</span><span>{{=value.num}}</span></p>
-        <p class="cxuanp2 "><span>{{=value.apply}}</span>申请</p>
-        <p class="cxuanp3 ">报告数量：8</p>
-    </div>
-</a>
-
-{{~}}
-</script>
-<script>remen()</script> -->
+    <script id="play_script2" type="text/x-dot-template">
+        {{~it:value:index}}
+        <li>
+            <a href="./jingtai.html">
+                <img src="{{=value.img}}" alt="">
+                <div class="play_name">
+                    <p id="play_p">{{= value.text}}</p>
+                    <span id='nb666'>{{= value.price}}</span>
+                </div>
+                <div class="play_bottom1">
+                    <label for="" class="play_right">{{=3}}</label>
+                    <label for="" class="play_right2">{{=5}}</label>
+                </div>
+            </a>
+        </li>
+        {{~}}
+    </script>
