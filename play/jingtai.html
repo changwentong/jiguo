@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="../css/base.css">
 <link rel="stylesheet" href="../css/common.css">
 <link rel="stylesheet" href="../css/sylc.css">
+<link rel="stylesheet" href="../css/index.css">
 
 <body>
     <!-- header头部部分 -->
@@ -19,22 +20,36 @@
                 <a href="../index.html"><img src="../images/logonew.png" alt=""></a>
             </div>
             <ul>
-                <li><a href="#">首页</a></li>
-                <li><a href="./play.html">酷玩</a></li>
-                <li><a href="#">导购</a></li>
-                <li class="header-color"><a href="#">试用</a></li>
-                <li><a href="#">报告</a></li>
+                <li><a href="../index.html">首页</a></li>
+                <li class="header-color"><a href="./play.html">酷玩</a></li>
+                <li><a href="../guid/guid_new.html">导购</a></li>
+                <li><a href="../use/use1.html">试用</a></li>
+                <li><a href="../report/report_new.html">报告</a></li>
             </ul>
             <div class="header_right">
                 <div class="header_search">
                     <img src="../img/search.png" alt="">
                 </div>
-                <div class="header_button"><a href="">注册</a></div>
+                <div class="header_button"><a href="../regist.html">注册</a></div>
             </div>
         </div>
     </header>
 
-
+    <nav class="nav">
+        <div class="banner w">
+            <div class="nav_vedio">
+                <h2>幻响小贝HiFi2.1音箱</h2>
+                <ul>
+                    <li><span id="span">126</span> 人申请</li>
+                    <li>￥599</li>
+                    <li>20台</li>
+                </ul>
+                <!-- <p>申请时间剩余：13天5小时37分钟</p> -->
+                <div id="time">申请时间剩余：<span></span>天<span></span>时<span></span>分<span></span>秒</div>
+                <button id="shenqing">立即申请<tton>
+            </div>
+        </div>
+    </nav>
     <!-- 试用流程部分 -->
     <div class="sylc_logo">
         <div class="logo">
@@ -296,3 +311,4 @@
         a[0].style.opacity = '1';
     }
 </script>
+<script src="../js/index.js"></script>

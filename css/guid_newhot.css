@@ -1,0 +1,142 @@
+.w {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* 导购清单筛选部分 */
+
+.guid {
+    width: 100%;
+    height: 175px;
+    border-top: 1px solid #999;
+}
+
+.guid .guid_header p {
+    font-size: 35px;
+    font-family: "黑体";
+    line-height: 125px;
+    text-align: center;
+}
+
+.guid .guid_header ul {
+    width: 400px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.guid .guid_header ul li {
+    float: left;
+    width: 200px;
+}
+
+.guid .guid_header ul li {
+    line-height: 50px;
+    text-align: center;
+    color: #a3acc3;
+}
+
+.guid .guid_header ul li a {
+    color: #a3acc3;
+}
+
+.guid .guid_header ul .guid_newhot {
+    line-height: 50px;
+    text-align: center;
+    border-bottom: 4px solid #fe5341;
+}
+
+.guid .guid_header ul .guid_newhot a {
+    color: #fe5341;
+}
+
+
+/* 导购清单详细信息部分 */
+
+.guid_footer {
+    width: 100%;
+    height: 1800px;
+    background-color: #f7f7f7;
+    overflow: hidden;
+}
+
+.guid_footer .guid_img ul {
+    height: 1710px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.guid_footer .guid_img ul li {
+    position: relative;
+    float: left;
+    width: 220px;
+    height: 230px;
+    background-color: #fff;
+    margin-right: 30px;
+    border: 1px solid #f7f7f7;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.guid_footer .guid_img ul li img {
+    width: 218px;
+    height: 130px;
+    border-radius: 10px 10px 0 0;
+}
+
+.guid_footer .guid_img ul li p {
+    font-size: 13px;
+    line-height: 20px;
+    color: #333333;
+    padding: 5px 15px;
+    margin-top: 5px;
+}
+
+.guid_footer .guid_img ul li .guid_span {
+    width: 65px;
+    height: 10px;
+    position: absolute;
+    bottom: 20px;
+    right: 0px;
+}
+
+.guid_footer .guid_img ul li .guid_span span {
+    display: inline-block;
+    font-size: 12px;
+    color: rgb(187, 184, 184);
+}
+
+.guid_footer .guid_img ul li .guid_span span:first-child {
+    padding-left: 15px;
+    background: url(../img/xin.png) no-repeat 0px 3px;
+}
+
+.guid_footer .guid_img ul li .guid_span span:last-child {
+    padding-left: 15px;
+    background: url(../img/reply.png) no-repeat 0px 3px;
+}
+
+.guid_select {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.guid_select:hover {
+    cursor: pointer;
+}
+
+.guid_select img {
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    transform: translate(-65px);
+}
+
+.guid_select p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #fe5341;
+}

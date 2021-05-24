@@ -5,24 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>极果首页</title>
+    <title>导购清单-最新</title>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/play.css">
+    <link rel="stylesheet" href="../css/guid_newhot.css">
 </head>
 
 <body>
-
     <!-- header头部部分 -->
     <header class="header">
         <div class="w">
             <div class="header_logo">
-                <a href="./index.html"><img src="../images/logonew.png" alt=""></a>
+                <a href="../index.html"><img src="../images/logonew.png" alt=""></a>
             </div>
-            <ul>
+            <ul id="lItem">
                 <li><a href="../index.html">首页</a></li>
-                <li class="header-color"><a href="./play.html">酷玩</a></li>
-                <li><a href="../guid/guid_new.html">导购</a></li>
+                <li><a href="../play/play.html">酷玩</a></li>
+                <li class="header-color"><a href="#">导购</a></li>
                 <li><a href="../use/use1.html">试用</a></li>
                 <li><a href="../report/report_new.html">报告</a></li>
             </ul>
@@ -35,33 +34,40 @@
         </div>
     </header>
 
-    <!-- //发现酷玩和三个选项 -->
-    <div class="play">
-        <div class="play_h">
-            <h1 class='z_h1'>发现酷玩</h1>
-            <div class="play_nav">
-                <a href="./play.html">最新</a>
-                <a href="" class="play_red">最热</a>
-                <a href="./play3.html">品类</a>
-            </div>
+    <!-- 导购清单筛选部分 -->
+    <div class="guid">
+        <div class="guid_header w">
+            <p>导购清单</p>
+            <ul>
+                <li class="guid_newhot"><a href="#">最新</a></li>
+                <li><a href="./guid_hot.html">最热</a></li>
+            </ul>
         </div>
     </div>
 
-    <!-- //商品列表 -->
-    <div class="play1">
-        <div class='play_shop'>
-            <ul id="list">
-
-            </ul>
-            <ul id="god">
-
+    <!--  导购清单信息部分  -->
+    <div class="guid_footer">
+        <div class="guid_img w">
+            <!-- ajax展示的区域 -->
+            <ul id="llist">
+                <!-- <li>
+                    <a href="">
+                        <img src="../images/g1.jpg" alt="">
+                        <p>花万元把蜗居秒变“豪宅”？这12件家具就能帮你办到</p>
+                        <div class="guid_span">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </a>
+                </li> -->
             </ul>
         </div>
-        <div class="nb" onclick="play_fn()">
-            <p> <img src="../img/more.png" alt="">&nbsp;<a href="javascript:;"> 点击加载更多</a></p>
+
+        <div class="guid_select">
+            <img id="Limg" src="../img/more.png" alt="">
+            <p>点击加载更多</p>
         </div>
     </div>
-
 
 
     <!-- footer底部部分 -->
@@ -121,30 +127,53 @@
         </div>
     </footer>
 
-
 </body>
 
 </html>
+<!-- 1. 引入doT.js -->
+<script src="../jason/doT.min.js"></script>
 
-<script src="../doT.min.js"></script>
-<script src="../js/play.js"></script>
-
-
-<script id="play_script" type="text/x-dot-template">
+<script>
+    window.onload = function() {
+        var ajax = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP');
+        ajax.open('get', 'http://1.15.132.9:3000/guid/new', true);
+        ajax.send();
+        ajax.onreadystatechange = function() {
+            if (ajax.readyState == 4) {
+                if (ajax.status == 200) {
+                    // 2. 找到数据
+                    var data = JSON.parse(ajax.responseText);
+                    // console.log(data);
+                    // console.log(data[0]);
+                    // 5. 调用，找到模板，把数据传进去
+                    var tepText = doT.template(document.getElementById('li_temp1').innerHTML);
+                    document.getElementById('llist').innerHTML = tepText(data) + tepText(data);
+                }
+            }
+        }
+    }
+</script>
+<!-- 4. 准备模板 -->
+<script id="li_temp1" type="text/x-dot-template">
+    <!-- 6. 展示数据  -->
     {{~it:value:index}}
     <li>
-        <a href="../jingtai.html">
+        <a href="./guid_project.html">
             <img src="{{=value.img}}" alt="">
-            <div class="play_name">
-                <p id="play_p">{{= value.text}}</p>
-                <span>{{= value.description}}</span>
-            </div>
-            <div class="play_bottom">
-                <span>{{= value.price}}</span>
-                <label for="" class="play_right">{{= value.like}}</label>
-                <label for="" class="play_right2">{{= value.words}}</label>
+            <p>{{=value.text}}</p>
+            <div class="guid_span">
+                <span>{{=value.like}}</span>
+                <span>{{=value.words}}</span>
             </div>
         </a>
     </li>
     {{~}}
+</script>
+
+<script>
+    var guid_select = document.getElementsByClassName('guid_select')[0];
+    var Limg = document.getElementById('Limg');
+    guid_select.onclick = function() {
+        Limg.src = '../img/loading-icon.gif';
+    }
 </script>

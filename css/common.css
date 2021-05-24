@@ -53,7 +53,7 @@
     line-height: 80px;
 }
 
-.header .header-color a {
+.header ul .header-color a {
     color: #fe5341;
 }
 
@@ -101,7 +101,7 @@
     background-color: #fe5341;
 }
 
-.header .header_right .header_button a:hover {
+.header .header_right .header_button:hover a {
     color: #fff;
 }
 
@@ -124,8 +124,8 @@
 
 .footer_a {
     float: left;
-    width: 130px;
-    height: 130px;
+    width: 120px;
+    height: 120px;
     border-radius: 5px;
 }
 
@@ -140,7 +140,7 @@
 
 .footer_b p {
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 20px;
     color: #aaa8a9;
 }
@@ -151,7 +151,7 @@
 
 .footer_bottom dl {
     float: left;
-    margin-left: 25px;
+    margin-left: 30px;
 }
 
 .footer_bottom dl dt {
@@ -165,7 +165,7 @@
 }
 
 .footer_bottom dl dd a {
-    font-size: 14px;
+    font-size: 12px;
     color: #aaa8a9;
 }
 
@@ -207,4 +207,29 @@
     height: 30px;
     padding: 6px 7px;
     background-color: #e8e8e8;
+}
+
+.jiazai {
+    width: 150px;
+    height: 50px;
+    /* line-height: 50px; */
+    margin: 0 auto;
+    color: red;
+}
+
+.jiazai>img {
+    margin-top: 13px;
+}
+
+.jiazai>p {
+    float: right;
+    width: 130px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: -4px;
+    font-size: 18px;
+}
+
+.jiazai:hover {
+    cursor: pointer;
 }

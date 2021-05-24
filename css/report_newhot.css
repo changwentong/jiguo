@@ -1,0 +1,207 @@
+.report_footer {
+    width: 100%;
+    height: 2700px;
+    background-color: #f7f7f7;
+    overflow: hidden;
+}
+
+.report_footer .report_context {
+    position: relative;
+    margin-top: 100px;
+}
+
+.report_footer .report_context ul {
+    width: 700px;
+    height: 2500px;
+}
+
+.report_footer .report_context ul li {
+    margin-bottom: 20px;
+}
+
+.report_footer .report_context ul li a {
+    position: relative;
+    z-index: 1;
+    width: 700px;
+    height: 415px;
+}
+
+.report_footer .report_context ul li>a:hover {
+    animation: star 1s linear infinite;
+}
+
+@keyframes star {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.report_footer .report_context ul li img {
+    position: relative;
+    z-index: 2;
+    width: 700px;
+    height: 415px;
+    border-radius: 10px 10px 0 0;
+}
+
+.report_footer .report_context ul li .report_cont {
+    width: 700px;
+    height: 120px;
+    background-color: #ffffff;
+    opacity: 0.8;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    padding: 25px;
+}
+
+.report_footer .report_context ul li .report_cont p {
+    font-size: 16px;
+    line-height: 20px;
+    color: #333333;
+}
+
+.report_footer .report_context ul li .report_name {
+    width: 100%;
+    height: 30px;
+    margin-top: 30px;
+}
+
+.report_footer .report_context ul li .report_name img {
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+.report_footer .report_context ul li .report_name .report_author {
+    font-size: 12px;
+    color: #fe695a;
+    line-height: 30px;
+    float: left;
+    margin-left: 10px;
+}
+
+.report_footer .report_context ul li .report_name .report_date {
+    font-size: 12px;
+    line-height: 30px;
+    float: left;
+    color: #a3a3a3;
+    margin-left: 10px;
+}
+
+.report_footer .report_context ul li .report_name .report_span {
+    width: 70px;
+    height: 30px;
+    float: right;
+}
+
+.report_footer .report_context ul li .report_name .report_span span {
+    color: #a3a3a3;
+}
+
+.report_footer .report_context ul li .report_name .report_span span:first-child {
+    padding-left: 20px;
+    background: url(../img/zan.png) no-repeat 5px 5px;
+}
+
+.report_footer .report_context ul li .report_name .report_span span:last-child {
+    padding-left: 20px;
+    background: url(../img/reply.png) no-repeat 5px 5px;
+}
+
+.report_footer .report_context ul li .report_des {
+    width: 100%;
+    height: 60px;
+    border: 1px solid #e6e9e9;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.report_footer .report_context ul li .report_des a {
+    line-height: 60px;
+    color: #a3a3a3;
+}
+
+
+/* 侧边栏 */
+
+.report_footer .report_context .report_aside {
+    width: 240px;
+    height: 1000px;
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.report_footer .report_context .report_aside h3 {
+    width: 240px;
+    height: 30px;
+    border-left: 6px solid #fe5341;
+    padding-left: 30px;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 500;
+    color: #474747;
+}
+
+.report_footer .report_context .report_aside img {
+    width: 240px;
+    margin-top: 20px;
+}
+
+.report_footer .report_context .report_aside h1 {
+    font-size: 20px;
+    color: #474747;
+    margin: 10px 0;
+}
+
+.report_footer .report_context .report_aside p {
+    font-size: 13px;
+    color: #a3a3a3;
+    line-height: 20px;
+}
+
+#report_focus {
+    margin-top: 40px;
+}
+
+
+/* 下拉框 */
+
+.report_select {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-500px);
+    width: 1000px;
+    height: 20px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.report_select:hover {
+    cursor: pointer;
+}
+
+.report_select img {
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    transform: translate(-65px);
+}
+
+.report_select p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #fe5341;
+}
